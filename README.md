@@ -65,4 +65,3 @@ The workflow `.github/workflows/daily-check.yaml` runs every 20 min from Monday 
 
 - [Google Sheets API](https://developers.google.com/sheets/api/)
 - [Telegram API Tutorial](https://core.telegram.org/bots/tutorial)
-
