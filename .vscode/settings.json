@@ -1,0 +1,19 @@
+{
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "cSpell.words": [
+    "ERRO",
+    "gaxios"
+  ],
+  "eslint.experimental": {
+    "useFlatConfig": true
+  },
+  "eslint.options": {
+    "overrideConfigFile": "eslint.config.mjs"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+  }
+}

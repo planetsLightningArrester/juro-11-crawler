@@ -1,0 +1,29 @@
+name: 🔄 Daily check
+defaults:
+  run:
+    shell: bash
+on:
+  schedule:
+    - cron: '0,20,40 * * * 1,2,3,4,5'
+jobs:
+  daily_check:
+    name: "🔄 Daily check"
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🛠️ NodeJS setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 🔧 Install dependencies
+        run: npm ci
+
+      - name: 🔄 Run daily check
+        run: |
+          npm start -- \
+            --google ${{ secrets.GOOGLE_TOKEN }} \
+            --telegram ${{ secrets.TELEGRAM_TOKEN }} \
+            --chat ${{ secrets.TELEGRAM_CHAT_ID }}
