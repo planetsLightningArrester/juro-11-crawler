@@ -11,6 +11,7 @@ Crawler to get JURO11 quota e compare the current asset value and compare with t
     - [💬 Telegram Setup](#-telegram-setup)
   - [📚 Usage](#-usage)
   - [🚀 Workflows](#-workflows)
+    - [🔄 Daily check](#-daily-check)
   - [📖 Reference](#-reference)
 
 ## 🔧 Setup
@@ -53,6 +54,10 @@ npm start --
 ```
 
 ## 🚀 Workflows
+
+### [🔄 Daily check](https://github.com/planetsLightningArrester/juro-11-crawler/actions/workflows/daily-check.yaml)
+
+[![🔄 Daily check](https://github.com/planetsLightningArrester/juro-11-crawler/actions/workflows/daily-check.yaml/badge.svg)](https://github.com/planetsLightningArrester/juro-11-crawler/actions/workflows/daily-check.yaml)
 
 The workflow `.github/workflows/daily-check.yaml` runs every 20 min from Monday to Friday checking for updates. The GH secrets `GOOGLE_TOKEN`, `TELEGRAM_TOKEN`, and `TELEGRAM_CHAT_ID` are the tokens passed to the script as arguments.
 
