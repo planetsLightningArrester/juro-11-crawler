@@ -3,6 +3,7 @@ defaults:
   run:
     shell: bash
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0,20,40 * * * 1,2,3,4,5'
 jobs:
