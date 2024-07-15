@@ -4,8 +4,12 @@
     "editor.formatOnPaste": true
   },
   "cSpell.words": [
+    "botfather",
+    "commitlint",
     "ERRO",
-    "gaxios"
+    "gaxios",
+    "JURO",
+    "printaeu"
   ],
   "eslint.experimental": {
     "useFlatConfig": true
