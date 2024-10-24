@@ -5,7 +5,7 @@ defaults:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0,20,40 11-22 * * 1,2,3,4,5'
+    - cron: '0,20,40 13-20 * * 1,2,3,4,5'
 jobs:
   daily_check:
     name: "🔄 Daily check"
