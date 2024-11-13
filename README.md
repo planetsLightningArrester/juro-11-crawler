@@ -1,5 +1,9 @@
 # 🏊‍♀️ JURO11 crawler
 
+## ⚠️ Deprecated ⚠️
+
+> This project was replaced by a more broad one using Deno 2 - [🏦 Equity value - market value ratio crawler](https://github.com/planetsLightningArrester/equity-value-ratio-crawler)
+
 Crawler to get JURO11 quota e compare the current asset value and compare with the current market value. If the difference is below/above a given threshold, an telegram message is sent.
 
 ## 📰 Content
