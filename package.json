@@ -1,7 +1,7 @@
 {
   "name": "juro-11-crawler",
   "displayName": "JURO11 crawler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Crawl JURO11 quota values and send telegram messages",
   "main": "out/main.js",
   "engines": {
