@@ -31,7 +31,7 @@ async function main(): Promise<void> {
   info.log(`🏦 Asset value: R$ ${assetQuotaValue.toString().replace('.', ',')} (${assetQuotaDate})`)
   const marketValue = await getLastAssetMarketValue(googleCredential)
   info.log(`💰 Asset market value: R$ ${marketValue.toString().replace('.', ',')}`)
-  const ratio = (Math.abs(marketValue - assetQuotaValue) / assetQuotaValue)
+  const ratio = (marketValue - assetQuotaValue) / assetQuotaValue
   if (ratio < 0.02) {
     info.log(`📈 Market/asset ratio less than 2% (${(ratio * 100).toFixed(1)}%). Sending notification`)
     await sendTelegramMessage(telegramToken, chatId, assetQuotaValue, marketValue)
@@ -113,7 +113,7 @@ async function getLastAssetMarketValue(credential: string): Promise<number> {
 }
 
 async function sendTelegramMessage(telegramToken: string, chatId: string, assetQuotaValue: number, marketValue: number): Promise<void> {
-  const ratio = (Math.abs(marketValue - assetQuotaValue) / assetQuotaValue)
+  const ratio = (marketValue - assetQuotaValue) / assetQuotaValue
   await request({
     method: 'POST',
     url: `https://api.telegram.org/bot${telegramToken}/sendMessage`,
@@ -125,7 +125,7 @@ async function sendTelegramMessage(telegramToken: string, chatId: string, assetQ
 
 Valor da cota: R$ ${assetQuotaValue.toString().replace('.', ',')}
 Valor de mercado: R$ ${marketValue.toString().replace('.', ',')}
-Relação Mercado/Cota: *${(ratio * 100).toFixed(1).replace('.', ',')}%*
+Relação Mercado/Cota: *${(ratio * 100).toFixed(1).replace('.', ',').replace('-', '\\-')}%*
       `
     },
     headers: {
